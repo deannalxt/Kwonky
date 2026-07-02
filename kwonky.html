@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Kwonky — Wealth OS</title>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="Kwonky">
+<meta name="theme-color" content="#EDEFF3">
+<link rel="apple-touch-icon" href="data:image/png;base64,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">
+<link rel="icon" href="data:image/png;base64,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">
+<style>
+  :root{
+    /* light theme · pastel pink + light grey */
+    --bg:#EDEFF3; --panel:#FFFFFF; --raised:#F6F7FA; --raised2:#EEF0F4;
+    --pink:#E88AAD; --pink-soft:#FBE3EC; --pink-deep:#C4638A; --pink-line:#F0A6C1;
+    --ink:#2B2F3A; --lo:#666E7E; --lolo:#9AA1B0;
+    --line:#E6E8EC; --line2:#DADDE3;
+    --pos:#3F9D7A; --neg:#D2635F;
+    --shadow:0 14px 34px -16px rgba(45,48,70,0.22);
+    --gold:var(--pink); --mint:var(--pos); --coral:var(--neg);
+  }
+  *{box-sizing:border-box; margin:0; padding:0}
+  html,body{height:100%}
+  body{
+    background:
+      radial-gradient(1100px 560px at 82% -12%, rgba(240,166,193,0.30), transparent 60%),
+      radial-gradient(860px 480px at -8% 18%, rgba(180,190,208,0.28), transparent 58%),
+      var(--bg);
+    color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    -webkit-font-smoothing:antialiased; line-height:1.45; min-height:100%;
+  }
+  .num{font-family:ui-monospace,"SF Mono","Cascadia Code",Menlo,Consolas,monospace; font-variant-numeric:tabular-nums; letter-spacing:-0.02em}
+  .wrap{max-width:1080px; margin:0 auto; padding:calc(28px + env(safe-area-inset-top)) calc(22px + env(safe-area-inset-right)) calc(80px + env(safe-area-inset-bottom)) calc(22px + env(safe-area-inset-left))}
+
+  .top{display:flex; align-items:center; justify-content:space-between; margin-bottom:26px; flex-wrap:wrap; gap:12px}
+  .brand{display:flex; align-items:baseline; gap:12px}
+  .mark{font-weight:800; font-size:26px; letter-spacing:0.14em; text-transform:uppercase;
+    background:linear-gradient(180deg,#EA8FB1,#C4638A); -webkit-background-clip:text; background-clip:text; color:transparent}
+  .mark .dot{color:var(--pink-deep); -webkit-text-fill-color:var(--pink-deep)}
+  .tag{color:var(--lolo); font-size:11px; letter-spacing:0.22em; text-transform:uppercase}
+  .topbtns{display:flex; gap:8px}
+  .ghost{background:var(--panel); border:1px solid var(--line2); color:var(--lo); padding:8px 12px; border-radius:10px; font-size:12px; cursor:pointer; transition:.15s}
+  .ghost:hover{color:var(--pink-deep); border-color:var(--pink-line)}
+
+  .grid{display:grid; gap:16px}
+  .card{background:var(--panel); border:1px solid var(--line); border-radius:18px; padding:20px; box-shadow:var(--shadow)}
+  .card h3{font-size:11px; letter-spacing:0.18em; text-transform:uppercase; color:var(--lolo); font-weight:700; margin-bottom:14px}
+
+  .kpis{grid-template-columns:repeat(4,1fr)}
+  .kpi .lbl{font-size:11px; letter-spacing:0.14em; text-transform:uppercase; color:var(--lolo); margin-bottom:8px}
+  .kpi .big{font-size:26px; font-weight:700}
+  .kpi .sub{font-size:12px; color:var(--lo); margin-top:6px}
+  .pos{color:var(--pos)} .neg{color:var(--neg)} .pinkc{color:var(--pink-deep)}
+
+  .bar{height:8px; background:rgba(20,24,40,0.07); border-radius:99px; overflow:hidden; margin-top:10px}
+  .bar > span{display:block; height:100%; border-radius:99px; background:linear-gradient(90deg,var(--pink),#F3B8CE)}
+  .barrow{display:flex; align-items:center; gap:12px; margin:10px 0}
+  .barrow .name{width:120px; font-size:13px; color:var(--lo); flex:none}
+  .barrow .track{flex:1; height:22px; background:rgba(20,24,40,0.05); border-radius:8px; position:relative; overflow:hidden}
+  .barrow .fill{position:absolute; inset:0 auto 0 0; border-radius:8px; background:linear-gradient(90deg, rgba(232,138,173,0.9), rgba(240,166,193,0.45))}
+  .barrow .val{width:96px; text-align:right; font-size:13px; flex:none}
+
+  .score{display:flex; align-items:center; gap:16px}
+  .ring{width:92px; height:92px; flex:none}
+  .score .meta .n{font-size:34px; font-weight:800; line-height:1}
+  .score .meta .d{font-size:12px; color:var(--lo); margin-top:4px}
+
+  .chips{display:flex; gap:20px; flex-wrap:wrap; margin-bottom:16px}
+  .chip .cl{font-size:11px; letter-spacing:0.12em; text-transform:uppercase; color:var(--lolo)}
+  .chip .cv{font-size:20px; font-weight:700; margin-top:3px}
+  .billrow{display:flex; align-items:center; gap:12px; padding:11px 0; border-bottom:1px solid var(--line)}
+  .billrow:last-of-type{border-bottom:none}
+  .billrow .bn{flex:1; min-width:0}
+  .billrow .bn .t{font-size:14px; font-weight:600}
+  .billrow .bn .s{font-size:12px; color:var(--lo)}
+  .billrow .amt{width:90px; text-align:right; font-size:14px; flex:none}
+  .stat{font-size:11px; padding:3px 10px; border-radius:99px; font-weight:600; white-space:nowrap}
+  .stat.paid{background:rgba(63,157,122,0.14); color:var(--pos)}
+  .stat.due{background:var(--pink-soft); color:var(--pink-deep)}
+  .stat.over{background:rgba(210,99,95,0.14); color:var(--neg)}
+  .mini{background:var(--panel); border:1px solid var(--line2); color:var(--lo); padding:6px 11px; border-radius:9px; font-size:12px; cursor:pointer; transition:.15s; white-space:nowrap}
+  .mini:hover{border-color:var(--pink-line); color:var(--pink-deep)}
+  .mini.solid{background:var(--pink); border-color:var(--pink); color:#4A2436; font-weight:700}
+  .mini.solid:hover{filter:brightness(1.04); color:#4A2436}
+
+  table{width:100%; border-collapse:collapse}
+  th{text-align:left; font-size:10px; letter-spacing:0.14em; text-transform:uppercase; color:var(--lolo); font-weight:700; padding:8px; border-bottom:1px solid var(--line)}
+  td{padding:11px 8px; border-bottom:1px solid var(--line); font-size:14px}
+  tr:last-child td{border-bottom:none}
+  .pill{display:inline-block; font-size:11px; padding:3px 9px; border-radius:99px; background:rgba(20,24,40,0.05); color:var(--lo)}
+  .pill.inc{background:rgba(63,157,122,0.14); color:var(--pos)}
+  .del{color:var(--lolo); cursor:pointer; background:none; border:none; font-size:13px}
+  .del:hover{color:var(--neg)}
+
+  label.f{display:block; font-size:11px; letter-spacing:0.12em; text-transform:uppercase; color:var(--lolo); margin:0 0 6px}
+  input,select{width:100%; background:var(--raised); border:1px solid var(--line2); color:var(--ink);
+    padding:11px 12px; border-radius:11px; font-size:14px; font-family:inherit; outline:none; transition:.15s}
+  input:focus,select:focus{border-color:var(--pink-line); box-shadow:0 0 0 3px rgba(240,166,193,0.25); background:var(--panel)}
+  input.num{font-family:ui-monospace,Menlo,monospace}
+  .btn{background:linear-gradient(180deg,#F0A6C1,#E285A8); color:#4A2436; border:none; padding:12px 18px; border-radius:12px; font-weight:700; font-size:14px; cursor:pointer; transition:.15s}
+  .btn:hover{filter:brightness(1.04)}
+  .btn.wide{width:100%}
+  .row{display:grid; gap:12px}
+  .r3{grid-template-columns:1.2fr 1fr 1fr} .r2{grid-template-columns:1fr 1fr} .r4{grid-template-columns:repeat(4,1fr)}
+  .r4b{grid-template-columns:1.4fr 1fr 0.8fr 1fr}
+
+  .seg{display:inline-flex; background:var(--raised2); border:1px solid var(--line2); border-radius:12px; padding:4px}
+  .seg button{background:none; border:none; color:var(--lo); padding:8px 16px; border-radius:9px; font-size:13px; cursor:pointer; font-weight:600}
+  .seg button.on{background:var(--pink-soft); color:var(--pink-deep)}
+
+  .muted{color:var(--lo)} .tiny{font-size:12px}
+  .empty{color:var(--lolo); font-size:13px; padding:18px 4px; text-align:center}
+  .flex{display:flex; align-items:center; gap:10px} .between{justify-content:space-between}
+  .mt{margin-top:16px} .mt24{margin-top:24px}
+  .toast{position:fixed; bottom:calc(22px + env(safe-area-inset-bottom)); left:50%; transform:translateX(-50%) translateY(20px); background:var(--panel); border:1px solid var(--line2); color:var(--ink); padding:12px 18px; border-radius:12px; font-size:13px; opacity:0; pointer-events:none; transition:.25s; box-shadow:var(--shadow); z-index:50}
+  .toast.show{opacity:1; transform:translateX(-50%) translateY(0)}
+
+  .ob{max-width:520px; margin:6vh auto 0}
+  .ob .card{padding:28px}
+  .steps{display:flex; gap:6px; margin-bottom:22px}
+  .steps i{height:4px; flex:1; border-radius:99px; background:rgba(20,24,40,0.08)}
+  .steps i.on{background:var(--pink)}
+  .ob h2{font-size:22px; margin-bottom:6px; font-weight:700}
+  .ob p.lede{color:var(--lo); font-size:14px; margin-bottom:22px}
+  .hint{font-size:12px; color:var(--lolo); margin-top:8px}
+
+  @media(max-width:820px){
+    .kpis{grid-template-columns:repeat(2,1fr)}
+    .r3,.r4,.r4b{grid-template-columns:1fr 1fr}
+    .cols2{grid-template-columns:1fr !important}
+  }
+  @media(max-width:520px){ .r2,.r3,.r4,.r4b{grid-template-columns:1fr} .barrow .name{width:88px} }
+  svg text{font-family:ui-monospace,Menlo,monospace}
+  :focus-visible{outline:2px solid var(--pink); outline-offset:2px}
+</style>
+</head>
+<body>
+<div class="wrap" id="app"></div>
+<div class="toast" id="toast"></div>
+
+<script>
+"use strict";
+/* Kwonky — offline personal wealth OS. Data lives in this browser
+ * (localStorage). No server. Export the JSON to back up / move devices. */
+const KEY = "kwonky_v1";
+const DEFAULT_CATS = ["Coffee","Latte","Food","Shopping (Online)","Shopping (Offline)","Clients","Medical","Others"];
+const DEFAULT_INCOME = ["Prudential","PA"];
+const ACCT_TYPES = ["Savings","Investment","Insurance","Retirement","Other"];
+const ACCT_COLOR = {Savings:"#E88AAD", Investment:"#B8C0CE", Insurance:"#F0B8CE", Retirement:"#9AA6B8", Other:"#D8DCE3"};
+
+const DEFAULT = () => ({
+  profile:{ name:"", currency:"$", pay1Day:1, pay1Amt:0, pay2Day:15, pay2Amt:0, budget:0 },
+  tx:[], goals:[], bills:[], accounts:[], netHistory:[],
+  cats:DEFAULT_CATS.slice(), incomeSources:DEFAULT_INCOME.slice(), created: Date.now()
+});
+
+/* safe storage: iOS file://, Private Browsing, or blocked cookies make
+ * localStorage THROW. Wrap every access so the app never dies on it. */
+let STORAGE_OK = (function(){ try{ const t="__k_probe"; localStorage.setItem(t,"1"); localStorage.removeItem(t); return true; }catch(e){ return false; } })();
+const LS = {
+  get(k){ try{ return localStorage.getItem(k); }catch(e){ return null; } },
+  set(k,v){ try{ localStorage.setItem(k,v); return true; }catch(e){ STORAGE_OK=false; return false; } },
+  del(k){ try{ localStorage.removeItem(k); }catch(e){} }
+};
+function load(){ try{ const r=LS.get(KEY); return r?JSON.parse(r):null; }catch(e){ return null; } }
+function migrate(){ if(!DB) return; if(!DB.bills) DB.bills=[]; if(!DB.goals) DB.goals=[]; if(!DB.tx) DB.tx=[]; if(!DB.accounts) DB.accounts=[]; if(!DB.netHistory) DB.netHistory=[]; if(!DB.cats||!DB.cats.length) DB.cats=DEFAULT_CATS.slice(); if(!DB.incomeSources||!DB.incomeSources.length) DB.incomeSources=DEFAULT_INCOME.slice(); }
+/* ---- persistence: plaintext OR encrypted-at-rest (AES-GCM, key from passcode) ---- */
+const ENCKEY="kwonky_enc_v1";
+const CRYPTO={ enabled:false, key:null, salt:null, blur:true };
+const _enc=new TextEncoder(), _dec=new TextDecoder();
+function _b64(buf){ let s=""; const b=new Uint8Array(buf); for(let i=0;i<b.length;i++) s+=String.fromCharCode(b[i]); return btoa(s); }
+function _ub64(s){ return Uint8Array.from(atob(s),c=>c.charCodeAt(0)); }
+async function _derive(pass,salt){
+  const base=await crypto.subtle.importKey("raw",_enc.encode(pass),"PBKDF2",false,["deriveKey"]);
+  return crypto.subtle.deriveKey({name:"PBKDF2",salt,iterations:200000,hash:"SHA-256"},base,{name:"AES-GCM",length:256},false,["encrypt","decrypt"]);
+}
+let _persisting=false,_dirty=false;
+async function persist(){
+  if(!CRYPTO.key){ return; }
+  if(_persisting){ _dirty=true; return; }
+  _persisting=true;
+  try{
+    const iv=crypto.getRandomValues(new Uint8Array(12));
+    const ct=await crypto.subtle.encrypt({name:"AES-GCM",iv},CRYPTO.key,_enc.encode(JSON.stringify(DB)));
+    LS.set(ENCKEY, JSON.stringify({v:1,salt:_b64(CRYPTO.salt),iv:_b64(iv),ct:_b64(ct)}));
+  }catch(e){ toast("Save failed — data kept in memory"); }
+  finally{ _persisting=false; if(_dirty){ _dirty=false; persist(); } }
+}
+function save(){ if(CRYPTO.enabled){ persist(); } else { LS.set(KEY, JSON.stringify(DB)); } }
+
+async function enableEncryption(pass){
+  CRYPTO.salt=crypto.getRandomValues(new Uint8Array(16));
+  CRYPTO.key=await _derive(pass,CRYPTO.salt);
+  CRYPTO.enabled=true;
+  await persist();
+  LS.del(KEY);       // remove the plaintext copy
+  _idleMs=(DB.profile.idleMin||3)*60000; bumpAct();
+}
+async function unlock(pass){
+  const env=JSON.parse(LS.get(ENCKEY));
+  const salt=_ub64(env.salt);
+  const key=await _derive(pass,salt);
+  const pt=await crypto.subtle.decrypt({name:"AES-GCM",iv:_ub64(env.iv)},key,_ub64(env.ct)); // throws on wrong passcode
+  DB=JSON.parse(_dec.decode(pt)); migrate();
+  CRYPTO.key=key; CRYPTO.salt=salt; CRYPTO.enabled=true; CRYPTO.blur=true;
+  _idleMs=(DB.profile.idleMin||3)*60000; bumpAct();
+}
+async function changePasscode(pass){
+  CRYPTO.salt=crypto.getRandomValues(new Uint8Array(16));
+  CRYPTO.key=await _derive(pass,CRYPTO.salt);
+  await persist(); toast("Passcode changed");
+}
+function lockNow(){ CRYPTO.key=null; renderLock(); }
+
+/* idle auto-relock */
+let _idleMs=180000, _lastAct=Date.now();
+function bumpAct(){ _lastAct=Date.now(); }
+["click","keydown","touchstart","mousemove"].forEach(e=>document.addEventListener(e,bumpAct,{passive:true}));
+setInterval(()=>{ if(CRYPTO.enabled && CRYPTO.key && (Date.now()-_lastAct)>_idleMs){ lockNow(); } },10000);
+
+/* mask helper for on-screen blur (does not affect stored data) */
+function mask(str){ return CRYPTO.enabled && CRYPTO.blur ? "••••" : str; }
+function toggleBlur(){ CRYPTO.blur=!CRYPTO.blur; renderApp(); }
+
+function renderLock(err){
+  $("#app").innerHTML=`<div class="top"><div class="brand"><span class="mark">Kwonky<span class="dot">.</span></span><span class="tag">Locked</span></div></div>
+    <div class="ob"><div class="card" style="text-align:center">
+      <div style="font-size:34px;margin:6px 0 10px">🔒</div>
+      <h2 style="font-size:20px">Enter passcode</h2>
+      <p class="lede" style="margin-bottom:18px">Your data is encrypted on this device.</p>
+      <input id="lk_pass" type="password" inputmode="numeric" placeholder="Passcode" style="text-align:center" onkeydown="if(event.key==='Enter')tryUnlock()">
+      ${err?`<div class="tiny neg mt">${err}</div>`:""}
+      <button class="btn wide mt24" onclick="tryUnlock()">Unlock</button>
+      <div class="hint">Forgot it? There's no recovery — the data can only be reset (erased) below.</div>
+      <button class="del tiny mt" onclick="wipe()">Reset & erase all data</button>
+    </div></div>`;
+  setTimeout(()=>{ const el=$("#lk_pass"); if(el) el.focus(); },50);
+}
+async function tryUnlock(){
+  const p=($("#lk_pass")||{}).value||"";
+  if(!p){ return; }
+  try{ await unlock(p); renderApp(); toast("Unlocked"); }
+  catch(e){ renderLock("Wrong passcode — try again"); }
+}
+function renderSetupEncryption(){
+  $("#app").innerHTML=`<div class="top"><div class="brand"><span class="mark">Kwonky<span class="dot">.</span></span><span class="tag">Security</span></div>
+    <button class="ghost" onclick="renderApp()">← Skip for now</button></div>
+    <div class="ob"><div class="card">
+      <h2 style="font-size:20px">Set a passcode</h2>
+      <p class="lede">Encrypts your whole dataset — accounts, transactions, everything — so it's unreadable without this passcode, even by someone who opens the file.</p>
+      <label class="f">Passcode</label><input id="se_p1" type="password" inputmode="numeric" placeholder="Choose a passcode">
+      <label class="f mt">Confirm passcode</label><input id="se_p2" type="password" inputmode="numeric" placeholder="Re-enter it">
+      <div class="card" style="background:rgba(210,99,95,0.08);border-color:rgba(210,99,95,0.3);margin-top:16px;box-shadow:none">
+        <div class="tiny" style="color:var(--neg)"><b>No recovery.</b> If you forget this passcode, the data is permanently unreadable. There is no reset link, by design. Export a backup you can re-import if unsure — note the backup is encrypted too.</div>
+      </div>
+      <button class="btn wide mt24" onclick="doEnableEncryption()">Encrypt my data</button>
+    </div></div>`;
+}
+async function doEnableEncryption(){
+  const a=$("#se_p1").value||"", b=$("#se_p2").value||"";
+  if(a.length<4){ toast("Use at least 4 characters"); return; }
+  if(a!==b){ toast("Passcodes don't match"); return; }
+  await enableEncryption(a); renderApp(); toast("Encryption on");
+}
+let DB = load(); migrate();
+
+const $ = (s,el=document)=>el.querySelector(s);
+const uid = ()=>Math.random().toString(36).slice(2,9);
+const cur = ()=>DB.profile.currency||"$";
+const fmt = n => cur()+Math.abs(Math.round(n)).toLocaleString();
+const fmtSigned = n => (n<0?"-":"")+fmt(n);
+const today = ()=> new Date().toISOString().slice(0,10);
+const pad2 = n => String(n).padStart(2,"0");
+function monthKey(d){ return d.slice(0,7); }
+function thisMonth(){ return today().slice(0,7); }
+function daysInMonth(ym){ const [y,m]=ym.split("-").map(Number); return new Date(y,m,0).getDate(); }
+function toast(msg){ const t=$("#toast"); t.textContent=msg; t.classList.add("show"); clearTimeout(t._t); t._t=setTimeout(()=>t.classList.remove("show"),1800); }
+function monthTx(ym){ return DB.tx.filter(t=>monthKey(t.date)===ym); }
+function sum(arr,f){ return arr.reduce((a,b)=>a+f(b),0); }
+function expectedIncome(){ return (+DB.profile.pay1Amt||0)+(+DB.profile.pay2Amt||0); }
+function escapeHtml(s){ return (s||"").replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
+function billPaidThisMonth(id){ return DB.tx.some(t=>t.billId===id && monthKey(t.date)===thisMonth()); }
+
+/* ============================ ONBOARDING ============================ */
+let obStep = 0;
+function renderOnboard(){
+  const p=DB.profile, app=$("#app");
+  const steps=[0,1,2].map(i=>`<i class="${i<=obStep?'on':''}"></i>`).join("");
+  let inner="";
+  if(obStep===0){
+    inner=`<h2>Welcome to Kwonky.</h2>
+      <p class="lede">A private wealth OS that lives in this browser. First — who am I working for?</p>
+      <label class="f">Your name</label><input id="i_name" placeholder="e.g. Alex" value="${escapeHtml(p.name)}">
+      <div class="row r2 mt"><div><label class="f">Currency symbol</label><input id="i_cur" class="num" value="${escapeHtml(p.currency||'$')}" maxlength="3"></div></div>
+      <p class="hint">Nothing leaves this device. Back up anytime via Export.</p>
+      <button class="btn wide mt24" onclick="obNext()">Continue</button>`;
+  } else if(obStep===1){
+    inner=`<h2>Your income arrives twice a month.</h2>
+      <p class="lede">The two paydays and amounts drive the burn-down and your savings score.</p>
+      <div class="row r2"><div><label class="f">Payday 1 — day</label><input id="i_d1" class="num" type="number" min="1" max="31" value="${p.pay1Day||1}"></div>
+        <div><label class="f">Amount</label><input id="i_a1" class="num" type="number" min="0" value="${p.pay1Amt||''}" placeholder="0"></div></div>
+      <div class="row r2 mt"><div><label class="f">Payday 2 — day</label><input id="i_d2" class="num" type="number" min="1" max="31" value="${p.pay2Day||15}"></div>
+        <div><label class="f">Amount</label><input id="i_a2" class="num" type="number" min="0" value="${p.pay2Amt||''}" placeholder="0"></div></div>
+      <p class="hint">Not fixed? Use typical amounts — log the real figure each time it lands.</p>
+      <div class="row r2 mt24"><button class="ghost" onclick="obBack()">Back</button><button class="btn" onclick="obNext()">Continue</button></div>`;
+  } else {
+    const inc=expectedIncome();
+    inner=`<h2>Set a monthly spending ceiling.</h2>
+      <p class="lede">Everything under it becomes savings. Income is <span class="pinkc num">${fmt(inc)}</span>/mo — what's the most you want to spend?</p>
+      <label class="f">Monthly spending budget</label>
+      <input id="i_budget" class="num" type="number" min="0" value="${p.budget||''}" placeholder="${Math.round(inc*0.7)||'0'}">
+      <p class="hint">A common target: ~70% spent, 30% saved. Change it anytime.</p>
+      <div class="row r2 mt24"><button class="ghost" onclick="obBack()">Back</button><button class="btn" onclick="obFinish()">Launch dashboard</button></div>`;
+  }
+  app.innerHTML=`<div class="top"><div class="brand"><span class="mark">Kwonky<span class="dot">.</span></span><span class="tag">Wealth OS</span></div></div>
+    <div class="ob"><div class="card"><div class="steps">${steps}</div>${inner}</div></div>`;
+}
+function obNext(){
+  if(obStep===0){ DB.profile.name=($("#i_name").value||"").trim(); DB.profile.currency=($("#i_cur").value||"$").trim()||"$"; }
+  else if(obStep===1){ DB.profile.pay1Day=+$("#i_d1").value||1; DB.profile.pay1Amt=+$("#i_a1").value||0; DB.profile.pay2Day=+$("#i_d2").value||15; DB.profile.pay2Amt=+$("#i_a2").value||0; }
+  save(); obStep++; renderOnboard();
+}
+function obBack(){ obStep--; renderOnboard(); }
+function obFinish(){ DB.profile.budget=+$("#i_budget").value||0; save(); renderApp(); toast("Dashboard ready. Add your recurring bills, then log spending."); }
+
+/* ============================ CHARTS ============================ */
+function burndownSVG(){
+  const ym=thisMonth(), dim=daysInMonth(ym), budget=+DB.profile.budget||0, p=DB.profile;
+  const spendByDay={};
+  monthTx(ym).filter(t=>t.type==="expense").forEach(t=>{ const d=+t.date.slice(8,10); spendByDay[d]=(spendByDay[d]||0)+t.amount; });
+  const W=640,H=200,padL=48,padR=14,padT=18,padB=24;
+  const x=d=>padL+(d-1)/(dim-1)*(W-padL-padR);
+  const maxY=Math.max(budget,1);
+  const y=v=>padT+(1-Math.min(Math.max(v,0),maxY)/maxY)*(H-padT-padB);
+  const todayD=+today().slice(8,10);
+  let cum=0, pts=[];
+  for(let d=1; d<=dim; d++){ cum+=spendByDay[d]||0; if(d>todayD) break; pts.push([x(d),y(budget-cum)]); }
+  const path=pts.map((pt,i)=>(i?"L":"M")+pt[0].toFixed(1)+" "+pt[1].toFixed(1)).join(" ");
+  const ideal=`M${x(1)} ${y(budget)} L${x(dim)} ${y(0)}`;
+  const pays=[p.pay1Day,p.pay2Day].filter(d=>d>=1&&d<=dim);
+  const payMarks=pays.map(d=>`<line x1="${x(d)}" y1="${padT}" x2="${x(d)}" y2="${H-padB}" stroke="rgba(232,138,173,0.5)" stroke-dasharray="3 4"/><text x="${x(d)}" y="${padT-5}" fill="#C4638A" font-size="9" text-anchor="middle">pay</text>`).join("");
+  const gridY=[0,0.5,1].map(f=>{ const yy=padT+f*(H-padT-padB), val=maxY*(1-f);
+    return `<line x1="${padL}" y1="${yy}" x2="${W-padR}" y2="${yy}" stroke="rgba(20,24,40,0.06)"/><text x="${padL-6}" y="${yy+3}" fill="#9AA1B0" font-size="9" text-anchor="end">${cur()}${Math.round(val).toLocaleString()}</text>`; }).join("");
+  const last=pts[pts.length-1], remain=budget-cum, dotColor=remain<0?"var(--neg)":"var(--pos)";
+  return `<svg viewBox="0 0 ${W} ${H}" width="100%" role="img" aria-label="Budget burn-down">
+    ${gridY}${payMarks}
+    <path d="${ideal}" fill="none" stroke="rgba(20,24,40,0.18)" stroke-width="1.5" stroke-dasharray="2 5"/>
+    <path d="${path}" fill="none" stroke="var(--pink)" stroke-width="2.5" stroke-linejoin="round"/>
+    ${last?`<circle cx="${last[0]}" cy="${last[1]}" r="4" fill="${dotColor}"/>`:""}</svg>`;
+}
+function categoryBars(ym){
+  const ex=monthTx(ym).filter(t=>t.type==="expense"), byCat={};
+  ex.forEach(t=>byCat[t.cat]=(byCat[t.cat]||0)+t.amount);
+  const rows=Object.entries(byCat).sort((a,b)=>b[1]-a[1]);
+  if(!rows.length) return `<div class="empty">No expenses logged this month yet.</div>`;
+  const max=rows[0][1];
+  return rows.map(([c,v])=>`<div class="barrow"><span class="name">${c}</span><span class="track"><span class="fill" style="width:${Math.max(4,v/max*100)}%"></span></span><span class="val num">${fmt(v)}</span></div>`).join("");
+}
+function weeklyTrendSVG(){
+  const now=new Date(), weeks=[];
+  for(let i=5;i>=0;i--){ const end=new Date(now); end.setDate(now.getDate()-i*7); const start=new Date(end); start.setDate(end.getDate()-6);
+    const s=start.toISOString().slice(0,10), e=end.toISOString().slice(0,10);
+    const tot=sum(DB.tx.filter(t=>t.type==="expense"&&t.date>=s&&t.date<=e),t=>t.amount);
+    weeks.push({tot,label:(start.getMonth()+1)+"/"+start.getDate()}); }
+  const W=640,H=170,padL=40,padR=10,padT=16,padB=26, max=Math.max(1,...weeks.map(w=>w.tot)), bw=(W-padL-padR)/weeks.length;
+  const bars=weeks.map((w,i)=>{ const h=(w.tot/max)*(H-padT-padB), xx=padL+i*bw+bw*0.18, ww=bw*0.64, yy=H-padB-h;
+    return `<rect x="${xx}" y="${yy}" width="${ww}" height="${Math.max(1,h)}" rx="4" fill="${i===weeks.length-1?'var(--pink)':'rgba(232,138,173,0.4)'}"/><text x="${xx+ww/2}" y="${H-padB+13}" fill="#9AA1B0" font-size="9" text-anchor="middle">${w.label}</text><text x="${xx+ww/2}" y="${yy-5}" fill="#7A8290" font-size="9" text-anchor="middle">${w.tot?cur()+Math.round(w.tot):''}</text>`; }).join("");
+  return `<svg viewBox="0 0 ${W} ${H}" width="100%" role="img" aria-label="Weekly spend trend">${bars}</svg>`;
+}
+function ringSVG(pct,color){
+  const r=40,c=2*Math.PI*r, off=c*(1-Math.max(0,Math.min(1,pct/100)));
+  return `<svg class="ring" viewBox="0 0 100 100"><circle cx="50" cy="50" r="${r}" fill="none" stroke="rgba(20,24,40,0.08)" stroke-width="9"/><circle cx="50" cy="50" r="${r}" fill="none" stroke="${color}" stroke-width="9" stroke-linecap="round" stroke-dasharray="${c}" stroke-dashoffset="${off}" transform="rotate(-90 50 50)"/></svg>`;
+}
+
+/* ============================ BILLS ============================ */
+function billsCard(){
+  const ym=thisMonth(), dim=daysInMonth(ym), todayD=+today().slice(8,10);
+  const bills=[...DB.bills].sort((a,b)=>a.day-b.day);
+  const totalExp=sum(bills,b=>b.amount);
+  const paidAmt=sum(bills.filter(b=>billPaidThisMonth(b.id)),b=>b.amount);
+  const unpaid=totalExp-paidAmt;
+  const spent=sum(monthTx(ym).filter(t=>t.type==="expense"),t=>t.amount);
+  const budget=+DB.profile.budget||0;
+  const safe=budget-spent-unpaid;
+
+  const list = bills.length ? bills.map(b=>{
+    const paid=billPaidThisMonth(b.id);
+    const day=Math.min(b.day,dim);
+    let stat, cls, action;
+    if(paid){ stat="Paid"; cls="paid"; action=`<button class="mini" onclick="unpayBill('${b.id}')">Undo</button>`; }
+    else if(day<todayD){ stat="Overdue"; cls="over"; action=`<button class="mini solid" onclick="payBill('${b.id}')">Mark paid</button>`; }
+    else if(day===todayD){ stat="Due today"; cls="due"; action=`<button class="mini solid" onclick="payBill('${b.id}')">Mark paid</button>`; }
+    else { stat="Due in "+(day-todayD)+"d"; cls="due"; action=`<button class="mini solid" onclick="payBill('${b.id}')">Mark paid</button>`; }
+    return `<div class="billrow">
+      <div class="bn"><div class="t">${escapeHtml(b.name)}</div><div class="s">day ${b.day} · ${b.cat}</div></div>
+      <span class="amt num">${fmt(b.amount)}</span>
+      <span class="stat ${cls}">${stat}</span>
+      ${action}
+      <button class="del" title="remove bill" onclick="delBill('${b.id}')">✕</button>
+    </div>`;
+  }).join("") : `<div class="empty">No recurring bills yet. Add rent, subscriptions, utilities — anything that hits on the same day each month.</div>`;
+
+  return `<div class="card mt">
+    <div class="flex between" style="margin-bottom:16px"><h3 style="margin:0">Recurring bills</h3>
+      <span class="tiny muted">${bills.length} bill${bills.length===1?'':'s'} · ${fmt(totalExp)}/mo</span></div>
+    <div class="chips">
+      <div class="chip"><div class="cl">Safe to spend</div><div class="cv num ${safe<0?'neg':'pinkc'}">${fmtSigned(safe)}</div></div>
+      <div class="chip"><div class="cl">Bills paid</div><div class="cv num">${fmt(paidAmt)}</div></div>
+      <div class="chip"><div class="cl">Still due</div><div class="cv num ${unpaid>0?'neg':'pos'}">${fmt(unpaid)}</div></div>
+    </div>
+    ${list}
+    <div class="row r4b mt24">
+      <input id="nb_name" placeholder="Bill name (e.g. Rent)">
+      <input id="nb_amt" class="num" type="number" min="0" placeholder="Amount">
+      <input id="nb_day" class="num" type="number" min="1" max="31" placeholder="Day">
+      <select id="nb_cat">${DB.cats.map(c=>`<option>${escapeHtml(c)}</option>`).join("")}</select>
+    </div>
+    <button class="btn mt" onclick="addBill()">Add recurring bill</button>
+    <div class="hint">“Safe to spend” = budget − spent − bills still due. It’s what’s truly discretionary after commitments.</div>
+  </div>`;
+}
+function addBill(){
+  const name=($("#nb_name").value||"").trim(), amt=+$("#nb_amt").value, day=+$("#nb_day").value;
+  if(!name||!amt||!day){ toast("Need a name, amount and day"); return; }
+  if(day<1||day>31){ toast("Day must be 1–31"); return; }
+  DB.bills.push({id:uid(),name,amount:Math.round(amt*100)/100,day,cat:$("#nb_cat").value}); save(); renderApp(); toast("Bill added");
+}
+function delBill(id){ if(!confirm("Remove this recurring bill? Past payments stay logged.")) return; DB.bills=DB.bills.filter(b=>b.id!==id); save(); renderApp(); }
+function payBill(id){
+  const b=DB.bills.find(x=>x.id===id); if(!b) return;
+  const dim=daysInMonth(thisMonth()); const d=Math.min(b.day,dim);
+  DB.tx.push({id:uid(),date:`${thisMonth()}-${pad2(d)}`,type:"expense",amount:b.amount,cat:b.cat,note:b.name,billId:b.id});
+  save(); renderApp(); toast(b.name+" marked paid");
+}
+function unpayBill(id){ DB.tx=DB.tx.filter(t=>!(t.billId===id && monthKey(t.date)===thisMonth())); save(); renderApp(); toast("Payment undone"); }
+
+/* ============================ ACCOUNTS / NET WORTH ============================ */
+function avgMonthlySpend(){
+  const b=+DB.profile.budget||0; if(b>0) return b;
+  const byM={}; DB.tx.filter(t=>t.type==="expense").forEach(t=>{const k=monthKey(t.date); byM[k]=(byM[k]||0)+t.amount;});
+  const vals=Object.values(byM); return vals.length? vals.reduce((a,c)=>a+c,0)/vals.length : 0;
+}
+function recordNet(){ const total=sum(DB.accounts,a=>a.balance); const d=today(); DB.netHistory=DB.netHistory.filter(h=>h.date!==d); DB.netHistory.push({date:d,total}); }
+function netTrendSVG(){
+  const h=[...DB.netHistory].sort((a,b)=>a.date.localeCompare(b.date)).slice(-14);
+  if(h.length<2) return `<div class="empty">Update balances on different days (or hit Save snapshot) to chart your net-worth trajectory.</div>`;
+  const W=640,H=140,padL=52,padR=12,padT=14,padB=22;
+  const vals=h.map(p=>p.total), min=Math.min(...vals), max=Math.max(...vals), span=(max-min)||1;
+  const x=i=>padL+i/(h.length-1)*(W-padL-padR);
+  const y=v=>padT+(1-(v-min)/span)*(H-padT-padB);
+  const path=h.map((p,i)=>(i?"L":"M")+x(i).toFixed(1)+" "+y(p.total).toFixed(1)).join(" ");
+  const area=path+` L${x(h.length-1).toFixed(1)} ${H-padB} L${x(0).toFixed(1)} ${H-padB} Z`;
+  const lastv=h[h.length-1].total, chg=lastv-h[0].total;
+  const grid=[max,min].map(v=>`<text x="${padL-6}" y="${y(v)+3}" fill="#9AA1B0" font-size="9" text-anchor="end">${cur()}${Math.round(v).toLocaleString()}</text>`).join("");
+  return `<svg viewBox="0 0 ${W} ${H}" width="100%" role="img" aria-label="Net worth trend">
+    ${grid}
+    <path d="${area}" fill="rgba(232,138,173,0.12)"/>
+    <path d="${path}" fill="none" stroke="var(--pink)" stroke-width="2.5" stroke-linejoin="round"/>
+    <circle cx="${x(h.length-1)}" cy="${y(lastv)}" r="4" fill="${chg<0?'var(--neg)':'var(--pos)'}"/></svg>`;
+}
+function accountsCard(){
+  const accts=[...DB.accounts];
+  const total=sum(accts,a=>a.balance);
+  const liquid=sum(accts.filter(a=>a.type==="Savings"),a=>a.balance);
+  const invested=sum(accts.filter(a=>a.type==="Investment"||a.type==="Insurance"),a=>a.balance);
+  const ms=avgMonthlySpend(), runway=ms>0?liquid/ms:0;
+  const byType={}; accts.forEach(a=>byType[a.type]=(byType[a.type]||0)+a.balance);
+  const segs=Object.entries(byType).sort((a,b)=>b[1]-a[1]);
+  const alloc = total>0 ? `<div style="display:flex;height:14px;border-radius:8px;overflow:hidden;margin:2px 0 12px">${segs.map(([t,v])=>`<div title="${t}" style="width:${v/total*100}%;background:${ACCT_COLOR[t]||'#D8DCE3'}"></div>`).join("")}</div>
+    <div class="flex" style="flex-wrap:wrap;gap:14px;margin-bottom:8px">${segs.map(([t,v])=>`<span class="tiny muted"><span style="display:inline-block;width:9px;height:9px;border-radius:2px;background:${ACCT_COLOR[t]||'#D8DCE3'};margin-right:5px;vertical-align:middle"></span>${t} · ${Math.round(v/total*100)}%</span>`).join("")}</div>` : "";
+  const list = accts.length ? accts.slice().sort((a,b)=>b.balance-a.balance).map(a=>`
+    <div class="billrow">
+      <div class="bn"><div class="t">${escapeHtml(a.name)}</div><div class="s">${a.type}${a.updated?` · updated ${a.updated.slice(5)}`:""}</div></div>
+      <span class="amt num">${mask(fmt(a.balance))}</span>
+      <input class="num" id="ub_${a.id}" type="number" placeholder="new bal." style="width:104px;padding:7px 9px">
+      <button class="mini solid" onclick="updateAccount('${a.id}')">Update</button>
+      <button class="del" title="remove account" onclick="delAccount('${a.id}')">✕</button>
+    </div>`).join("") : `<div class="empty">Add each account — your 4 savings accounts, your Endowus portfolio, your insurer investment. Update the balance whenever you check it.</div>`;
+  const blurBtn = CRYPTO.enabled ? `<button class="mini" onclick="toggleBlur()">${CRYPTO.blur?'👁 Reveal':'🙈 Hide'}</button>` : "";
+  return `<div class="card">
+    <div class="flex between" style="margin-bottom:16px"><h3 style="margin:0">Net worth · accounts</h3>
+      <div class="flex" style="gap:8px">${blurBtn}<span class="tiny muted">${accts.length} account${accts.length===1?'':'s'}</span></div></div>
+    <div class="chips">
+      <div class="chip"><div class="cl">Total net worth</div><div class="cv num pinkc">${mask(fmt(total))}</div></div>
+      <div class="chip"><div class="cl">Liquid savings</div><div class="cv num">${mask(fmt(liquid))}</div></div>
+      <div class="chip"><div class="cl">Invested</div><div class="cv num">${mask(fmt(invested))}</div></div>
+      <div class="chip"><div class="cl">Emergency runway</div><div class="cv num ${runway<3?'neg':runway>=6?'pos':''}">${ms>0?runway.toFixed(1)+' mo':'—'}</div></div>
+    </div>
+    ${alloc}
+    ${list}
+    <div class="row r4b mt24">
+      <input id="na_name" placeholder="Account name (e.g. Endowus)">
+      <input id="na_bal" class="num" type="number" placeholder="Balance">
+      <select id="na_type">${ACCT_TYPES.map(t=>`<option>${t}</option>`).join("")}</select>
+      <button class="btn" onclick="addAccount()">Add account</button>
+    </div>
+    <div class="flex between mt24"><h3 style="margin:0">Net-worth trajectory</h3><button class="mini" onclick="snapshotNetWorth()">Save snapshot</button></div>
+    <div class="mt">${CRYPTO.enabled&&CRYPTO.blur?`<div class="empty">Hidden — tap Reveal to show your net-worth trend.</div>`:netTrendSVG()}</div>
+    <div class="hint">Endowus / insurer values aren’t live — update them when you check, and each update snapshots the trend. Emergency runway = liquid savings ÷ monthly spend.</div>
+  </div>`;
+}
+function addAccount(){ const n=($("#na_name").value||"").trim(), b=+$("#na_bal").value, t=$("#na_type").value;
+  if(!n||$("#na_bal").value===""||isNaN(b)){ toast("Need a name and balance"); return; }
+  DB.accounts.push({id:uid(),name:n,type:t,balance:Math.round(b),updated:today()}); recordNet(); save(); renderApp(); toast("Account added"); }
+function delAccount(id){ if(!confirm("Remove this account from net worth? Its balance history stays in snapshots.")) return; DB.accounts=DB.accounts.filter(a=>a.id!==id); recordNet(); save(); renderApp(); }
+function updateAccount(id){ const raw=$("#ub_"+id).value; if(raw===""||isNaN(+raw)){ toast("Enter the new balance"); return; }
+  const a=DB.accounts.find(x=>x.id===id); if(a){ a.balance=Math.round(+raw); a.updated=today(); recordNet(); save(); renderApp(); toast(a.name+" updated"); } }
+function snapshotNetWorth(){ if(!DB.accounts.length){ toast("Add an account first"); return; } recordNet(); save(); renderApp(); toast("Net-worth snapshot saved"); }
+
+function incomeBySource(ym){
+  const inc=monthTx(ym).filter(t=>t.type==="income");
+  if(!inc.length) return "";
+  const by={}; inc.forEach(t=>{ const s=t.source||"Other"; by[s]=(by[s]||0)+t.amount; });
+  const parts=Object.entries(by).sort((a,b)=>b[1]-a[1]).map(([s,v])=>`${escapeHtml(s)} ${fmt(v)}`);
+  return `<div class="sub tiny" style="color:var(--pink-deep)">${parts.join(" · ")}</div>`;
+}
+
+/* ============================ DASHBOARD ============================ */
+function renderApp(){
+  if(!DB){ DB=DEFAULT(); } migrate();
+  if(!DB.profile.name && DB.profile.pay1Amt===0 && DB.profile.pay2Amt===0 && !DB.tx.length && !DB.bills.length){ renderOnboard(); return; }
+
+  const ym=thisMonth(), mtx=monthTx(ym);
+  const spent=sum(mtx.filter(t=>t.type==="expense"),t=>t.amount);
+  const incomeGot=sum(mtx.filter(t=>t.type==="income"),t=>t.amount);
+  const expInc=expectedIncome(), budget=+DB.profile.budget||0, remaining=budget-spent;
+  const saved=incomeGot-spent;
+  const hasInc=incomeGot>0;
+  const savingsRate=hasInc?Math.max(0,Math.round(saved/incomeGot*100)):null;
+  const budgetUsed=budget>0?Math.round(spent/budget*100):0;
+  const dim=daysInMonth(ym), todayD=+today().slice(8,10), idealSpent=budget*(todayD/dim), pace=spent-idealSpent;
+  const paceMsg=budget<=0?"Set a budget to track pace":pace>budget*0.05?`Over pace by ${fmt(pace)}`:pace<-budget*0.05?`Under pace by ${fmt(-pace)}`:"On pace";
+  const paceClass=pace>budget*0.05?"neg":pace<-budget*0.05?"pos":"muted";
+  const scoreColor=!hasInc?"var(--lolo)":savingsRate>=25?"var(--pos)":savingsRate>=10?"var(--pink)":"var(--neg)";
+  const grade=!hasInc?"—":savingsRate>=30?"A":savingsRate>=20?"B":savingsRate>=10?"C":savingsRate>=1?"D":"F";
+
+  $("#app").innerHTML=`
+  <div class="top">
+    <div class="brand"><span class="mark">Kwonky<span class="dot">.</span></span>
+      <span class="tag">${DB.profile.name?escapeHtml(DB.profile.name)+" · ":""}${new Date().toLocaleDateString(undefined,{month:'long',year:'numeric'})}</span></div>
+    <div class="topbtns">
+      <button class="ghost" onclick="doExport()">Export</button>
+      <button class="ghost" onclick="doImport()">Import</button>
+      <button class="ghost" onclick="editProfile()">Settings</button>
+    </div>
+  </div>
+
+  <div class="grid kpis" style="margin-bottom:16px">
+    <div class="card kpi"><div class="lbl">Income this month</div><div class="big num pinkc">${fmt(incomeGot||0)}</div><div class="sub">of ${fmt(expInc)} expected</div>${incomeBySource(ym)}</div>
+    <div class="card kpi"><div class="lbl">Spent</div><div class="big num">${fmt(spent)}</div><div class="sub ${paceClass}">${paceMsg}</div></div>
+    <div class="card kpi"><div class="lbl">Budget left</div><div class="big num ${remaining<0?'neg':'pos'}">${fmtSigned(remaining)}</div><div class="sub">${budgetUsed}% of ${fmt(budget)} used</div><div class="bar"><span style="width:${Math.min(100,budgetUsed)}%;${budgetUsed>100?'background:var(--neg)':''}"></span></div></div>
+    <div class="card kpi"><div class="lbl">Saved this month</div><div class="big num ${!hasInc?'muted':saved<0?'neg':'pos'}">${hasInc?fmtSigned(saved):'—'}</div><div class="sub">${hasInc?'income logged − spent':'awaiting income'}</div></div>
+  </div>
+
+  ${accountsCard()}
+
+  <div class="grid mt" style="grid-template-columns:1.6fr 1fr">
+    <div class="card cols2"><div class="flex between"><h3>Budget burn-down · this month</h3><span class="tiny muted">pink = you · dotted = ideal pace</span></div>${burndownSVG()}</div>
+    <div class="card cols2"><h3>Savings score</h3>
+      <div class="score">${ringSVG(hasInc?savingsRate:0,scoreColor)}<div class="meta"><div class="n" style="color:${scoreColor}">${hasInc?savingsRate+'%':'—'}</div><div class="d">${hasInc?`Grade ${grade} · saving ${savingsRate>=20?'well':savingsRate>=10?'okay':'too little'}`:'Log income to score'}</div></div></div>
+      <div class="tiny muted mt">Scored on income actually logged this month ÷ spend — not expected. Stays blank until income lands.</div></div>
+  </div>
+
+  ${billsCard()}
+
+  <div class="card mt">
+    <div class="flex between" style="margin-bottom:14px"><h3 style="margin:0">Log a transaction</h3>
+      <div class="seg" id="typeSeg"><button class="on" data-t="expense" onclick="setType('expense')">Expense</button><button data-t="income" onclick="setType('income')">Income</button></div></div>
+    <div class="row r4">
+      <div><label class="f">Amount</label><input id="t_amt" class="num" type="number" min="0" step="0.01" placeholder="0.00"></div>
+      <div><label class="f" id="catLbl">Category</label>
+        <select id="t_cat">${DB.cats.map(c=>`<option>${escapeHtml(c)}</option>`).join("")}</select>
+        <select id="t_src" style="display:none">${DB.incomeSources.map(s=>`<option>${escapeHtml(s)}</option>`).join("")}</select></div>
+      <div><label class="f">Date</label><input id="t_date" type="date" value="${today()}"></div>
+      <div><label class="f">Note (optional)</label><input id="t_note" placeholder="e.g. groceries"></div>
+    </div>
+    <button class="btn mt" onclick="addTx()">Add transaction</button>
+  </div>
+
+  <div class="grid mt" style="grid-template-columns:1fr 1fr">
+    <div class="card cols2"><h3>Spending by category · this month</h3>${categoryBars(ym)}</div>
+    <div class="card cols2"><h3>Weekly spend · last 6 weeks</h3>${weeklyTrendSVG()}</div>
+  </div>
+
+  ${goalsCard()}
+
+  <div class="card mt"><div class="flex between"><h3 style="margin:0">Recent activity</h3><span class="tiny muted">${DB.tx.length} total</span></div>${txTable()}</div>
+
+  <div class="flex between mt24">
+    <span class="tiny" style="color:var(--lolo)">Kwonky · stored locally in this browser · created ${new Date(DB.created).toLocaleDateString()}</span>
+    <button class="del tiny" onclick="wipe()">Reset all data</button>
+  </div>`;
+  window._txType="expense";
+}
+
+function txTable(){
+  const rows=[...DB.tx].sort((a,b)=> b.date.localeCompare(a.date) || b.id.localeCompare(a.id)).slice(0,12);
+  if(!rows.length) return `<div class="empty">No transactions yet. Log your first one above.</div>`;
+  return `<table><thead><tr><th>Date</th><th>Type</th><th>Category</th><th>Note</th><th style="text-align:right">Amount</th><th></th></tr></thead><tbody>
+    ${rows.map(t=>`<tr>
+      <td class="num muted">${t.date.slice(5)}</td>
+      <td><span class="pill ${t.type==='income'?'inc':''}">${t.type}</span></td>
+      <td>${t.type==='income'?escapeHtml(t.source||'Income'):t.cat}${t.billId?' <span class="tiny" style="color:var(--pink-deep)">•bill</span>':''}</td>
+      <td class="muted">${t.note?escapeHtml(t.note):'—'}</td>
+      <td class="num ${t.type==='income'?'pos':''}" style="text-align:right">${t.type==='income'?'+':''}${fmt(t.amount)}</td>
+      <td style="text-align:right"><button class="del" title="delete" onclick="delTx('${t.id}')">✕</button></td>
+    </tr>`).join("")}</tbody></table>`;
+}
+function goalsCard(){
+  const g=DB.goals;
+  const rows=g.length? g.map(x=>{ const pct=x.target>0?Math.min(100,Math.round(x.saved/x.target*100)):0;
+    return `<div style="margin-bottom:16px"><div class="flex between"><span>${escapeHtml(x.name)}</span><span class="num muted tiny">${fmt(x.saved)} / ${fmt(x.target)} · ${pct}%</span></div>
+      <div class="bar"><span style="width:${pct}%"></span></div>
+      <div class="flex mt" style="gap:8px"><input class="num" style="max-width:130px" type="number" placeholder="add amount" id="g_${x.id}"><button class="mini" onclick="addToGoal('${x.id}')">Add to goal</button><button class="del tiny" style="margin-left:auto" onclick="delGoal('${x.id}')">remove</button></div></div>`;
+  }).join("") : `<div class="empty">No goals yet. Name one — an emergency fund, a trip, a deposit.</div>`;
+  return `<div class="card mt"><h3>Wealth goals</h3>${rows}
+    <div class="row r3 mt"><input id="ng_name" placeholder="Goal name"><input id="ng_target" class="num" type="number" placeholder="Target amount"><button class="btn" onclick="addGoal()">Add goal</button></div></div>`;
+}
+
+/* actions */
+function setType(t){ window._txType=t; document.querySelectorAll('#typeSeg button').forEach(b=>b.classList.toggle('on',b.dataset.t===t));
+  const inc=t==='income'; $("#t_cat").style.display=inc?'none':'block'; $("#t_src").style.display=inc?'block':'none'; $("#catLbl").textContent=inc?'Income source':'Category'; }
+function addTx(){ const amt=+$("#t_amt").value; if(!amt||amt<=0){ toast("Enter an amount above 0"); return; }
+  const isInc=window._txType==='income';
+  DB.tx.push({id:uid(),date:$("#t_date").value||today(),type:window._txType||"expense",amount:Math.round(amt*100)/100,cat:isInc?"Income":$("#t_cat").value,source:isInc?$("#t_src").value:undefined,note:($("#t_note").value||"").trim()});
+  save(); renderApp(); toast((window._txType==='income'?'Income':'Expense')+" logged"); }
+function delTx(id){ DB.tx=DB.tx.filter(t=>t.id!==id); save(); renderApp(); }
+function addGoal(){ const n=($("#ng_name").value||"").trim(), t=+$("#ng_target").value; if(!n||!t){ toast("Give the goal a name and target"); return; }
+  DB.goals.push({id:uid(),name:n,target:Math.round(t),saved:0}); save(); renderApp(); }
+function addToGoal(id){ const v=+$("#g_"+id).value; if(!v){toast("Enter an amount");return;} const g=DB.goals.find(x=>x.id===id); if(g){ g.saved+=Math.round(v); save(); renderApp(); toast("Added to "+g.name); } }
+function delGoal(id){ DB.goals=DB.goals.filter(x=>x.id!==id); save(); renderApp(); }
+
+function editProfile(){
+  const p=DB.profile;
+  $("#app").innerHTML=`<div class="top"><div class="brand"><span class="mark">Kwonky<span class="dot">.</span></span><span class="tag">Settings</span></div><button class="ghost" onclick="renderApp()">← Back to dashboard</button></div>
+    <div class="ob"><div class="card"><h2 style="font-size:20px;margin-bottom:18px">Profile & income</h2>
+      <div class="row r2"><div><label class="f">Name</label><input id="s_name" value="${escapeHtml(p.name)}"></div><div><label class="f">Currency</label><input id="s_cur" class="num" value="${escapeHtml(p.currency)}"></div></div>
+      <div class="row r2 mt"><div><label class="f">Payday 1 day</label><input id="s_d1" class="num" type="number" value="${p.pay1Day}"></div><div><label class="f">Payday 1 amount</label><input id="s_a1" class="num" type="number" value="${p.pay1Amt}"></div></div>
+      <div class="row r2 mt"><div><label class="f">Payday 2 day</label><input id="s_d2" class="num" type="number" value="${p.pay2Day}"></div><div><label class="f">Payday 2 amount</label><input id="s_a2" class="num" type="number" value="${p.pay2Amt}"></div></div>
+      <div class="mt"><label class="f">Monthly spending budget</label><input id="s_budget" class="num" type="number" value="${p.budget}"></div>
+      <button class="btn wide mt24" onclick="saveProfile()">Save changes</button>
+
+      <div style="border-top:1px solid var(--line); margin:24px 0 0; padding-top:20px">
+        <label class="f">Expense categories</label>
+        <div class="flex" style="flex-wrap:wrap; gap:8px; margin-bottom:12px">
+          ${DB.cats.map(c=>`<span class="pill" style="display:inline-flex;align-items:center;gap:6px">${escapeHtml(c)} <button class="del" style="font-size:12px" onclick="delCat('${escapeHtml(c).replace(/'/g,"\\'")}')">✕</button></span>`).join("")}
+        </div>
+        <div class="flex" style="gap:8px"><input id="new_cat" placeholder="Add a category"><button class="mini solid" onclick="addCat()">Add</button></div>
+      </div>
+
+      <div style="border-top:1px solid var(--line); margin:20px 0 0; padding-top:20px">
+        <label class="f">Income sources</label>
+        <div class="flex" style="flex-wrap:wrap; gap:8px; margin-bottom:12px">
+          ${DB.incomeSources.map(s=>`<span class="pill inc" style="display:inline-flex;align-items:center;gap:6px">${escapeHtml(s)} <button class="del" style="font-size:12px" onclick="delSource('${escapeHtml(s).replace(/'/g,"\\'")}')">✕</button></span>`).join("")}
+        </div>
+        <div class="flex" style="gap:8px"><input id="new_src" placeholder="Add an income source"><button class="mini solid" onclick="addSource()">Add</button></div>
+        <div class="hint">Removing a category or source won't touch past transactions — they keep their old label.</div>
+      </div>
+
+      <div style="border-top:1px solid var(--line); margin:20px 0 0; padding-top:20px">
+        <label class="f">Privacy & encryption</label>
+        ${CRYPTO.enabled ? `
+          <div class="tiny pos" style="margin-bottom:12px">🔒 Your data is encrypted on this device.</div>
+          <div class="row r2"><button class="mini" onclick="lockNow()">Lock now</button><button class="mini" onclick="promptChangePasscode()">Change passcode</button></div>
+          <label class="f mt">Auto-lock after idle (minutes)</label>
+          <input id="s_idle" class="num" type="number" min="1" max="120" value="${DB.profile.idleMin||3}" style="max-width:120px">
+          <div class="hint">Applied when you save changes. Lower = safer if you leave the app open.</div>
+        ` : `
+          <div class="tiny muted" style="margin-bottom:12px">Your data is currently unencrypted. Anyone who opens the file can read it.</div>
+          <button class="mini solid" onclick="renderSetupEncryption()">Set a passcode & encrypt</button>
+        `}
+      </div>
+    </div></div>`;
+}
+function saveProfile(){ const p=DB.profile; p.name=$("#s_name").value.trim(); p.currency=$("#s_cur").value.trim()||"$"; p.pay1Day=+$("#s_d1").value||1; p.pay1Amt=+$("#s_a1").value||0; p.pay2Day=+$("#s_d2").value||15; p.pay2Amt=+$("#s_a2").value||0; p.budget=+$("#s_budget").value||0; const idl=$("#s_idle"); if(idl){ p.idleMin=Math.max(1,+idl.value||3); _idleMs=p.idleMin*60000; } save(); renderApp(); toast("Saved"); }
+function promptChangePasscode(){ const a=prompt("New passcode (min 4 chars):"); if(a===null) return; if(a.length<4){ toast("Too short"); return; } const b=prompt("Confirm new passcode:"); if(a!==b){ toast("Passcodes don't match"); return; } changePasscode(a); }
+function addCat(){ const v=($("#new_cat").value||"").trim(); if(!v){toast("Type a category name");return;} if(DB.cats.includes(v)){toast("Already exists");return;} DB.cats.push(v); save(); editProfile(); }
+function delCat(c){ DB.cats=DB.cats.filter(x=>x!==c); if(!DB.cats.length) DB.cats=DEFAULT_CATS.slice(); save(); editProfile(); }
+function addSource(){ const v=($("#new_src").value||"").trim(); if(!v){toast("Type a source name");return;} if(DB.incomeSources.includes(v)){toast("Already exists");return;} DB.incomeSources.push(v); save(); editProfile(); }
+function delSource(s){ DB.incomeSources=DB.incomeSources.filter(x=>x!==s); if(!DB.incomeSources.length) DB.incomeSources=DEFAULT_INCOME.slice(); save(); editProfile(); }
+
+function doExport(){
+  let data,name;
+  if(CRYPTO.enabled){ data=LS.get(ENCKEY)||""; name="kwonky-encrypted-"+today()+".json"; }
+  else { data=JSON.stringify(DB,null,2); name="kwonky-backup-"+today()+".json"; }
+  const blob=new Blob([data],{type:"application/json"}); const a=document.createElement("a"); a.href=URL.createObjectURL(blob); a.download=name; a.click();
+  toast(CRYPTO.enabled?"Encrypted backup downloaded":"Backup downloaded");
+}
+function doImport(){ const inp=document.createElement("input"); inp.type="file"; inp.accept="application/json";
+  inp.onchange=e=>{ const f=e.target.files[0]; if(!f)return; const r=new FileReader(); r.onload=()=>{ try{ const raw=r.result; const d=JSON.parse(raw);
+    if(d && d.ct && d.iv && d.salt){ LS.set(ENCKEY, raw); LS.del(KEY); CRYPTO.enabled=true; CRYPTO.key=null; renderLock(); toast("Encrypted backup loaded — enter its passcode"); return; }
+    if(d && d.profile && Array.isArray(d.tx)){ DB=d; migrate(); if(CRYPTO.enabled){ persist(); } else { save(); } renderApp(); toast("Data imported"); return; }
+    throw 0;
+  }catch(_){ toast("That file isn't a Kwonky backup"); } }; r.readAsText(f); };
+  inp.click(); }
+function wipe(){ if(confirm("Erase ALL Kwonky data in this browser? Export a backup first if unsure. If encrypted and you forgot the passcode, this is the only way forward — and the data is gone.")){ LS.del(KEY); LS.del(ENCKEY); CRYPTO.enabled=false; CRYPTO.key=null; CRYPTO.salt=null; DB=DEFAULT(); obStep=0; renderApp(); } }
+
+function renderStorageWarning(){
+  $("#app").innerHTML=`<div class="top"><div class="brand"><span class="mark">Kwonky<span class="dot">.</span></span><span class="tag">Storage blocked</span></div></div>
+  <div class="ob"><div class="card">
+    <div style="font-size:34px;margin:6px 0 10px">⚠️</div>
+    <h2 style="font-size:20px">This browser won't let Kwonky save</h2>
+    <p class="lede">Your data can't be stored here, so nothing you enter will persist. This happens in three situations:</p>
+    <div class="tiny muted" style="line-height:1.9">
+      1. You opened the <b>file directly</b> (address starts with <span class="num">file://</span>) instead of your hosted link. Open your <b>tiiny.site</b> link instead.<br>
+      2. You're in <b>Private Browsing</b> — switch to a normal tab.<br>
+      3. Site data / cookies are <b>blocked</b> in Safari settings for this site.
+    </div>
+    <button class="btn wide mt24" onclick="bootContinue(true)">Continue anyway (won't save)</button>
+    <div class="hint">Fixing the address is the real solution — in-memory mode loses everything on close.</div>
+  </div></div>`;
+}
+function bootContinue(force){
+  DB=load(); migrate(); if(!DB){ DB=DEFAULT(); }
+  renderApp();
+  if(force||!STORAGE_OK) toast("Running without saving — data is temporary");
+}
+function boot(){
+  if(!STORAGE_OK){ renderStorageWarning(); return; }
+  if(LS.get(ENCKEY)){ CRYPTO.enabled=true; renderLock(); return; }
+  DB=load(); migrate(); if(!DB){ DB=DEFAULT(); }
+  renderApp();
+}
+boot();
+</script>
+</body>
+</html>
